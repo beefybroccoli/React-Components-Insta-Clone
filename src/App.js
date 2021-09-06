@@ -64,10 +64,15 @@ const App = () => {
     set_statePosts(updatedPosts);
   };
 
-  const addComment = (postId, new_comment) => {
+  const addComment = (new_comment, postId) => {
     const updatedPosts = statePosts.map((eachPost) => {
       if (eachPost.id === postId) {
-        return { ...eachPost, comments: eachPost.comments.push(new_comment) };
+        const updatedComments = eachPost.comments;
+        updatedComments.push(new_comment);
+        return {
+          ...eachPost,
+          comments: updatedComments,
+        };
       } else {
         return eachPost;
       }

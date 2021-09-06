@@ -30,9 +30,9 @@ const LikeSection = (props) => {
   //toggle Component_Box using stateCommentBox
   const CommentBoxDiv = styled.div`
     background-color: grey;
-    display: block;
+    /* display: block; */
 
-    /* display: ${stateCommentBox ? `block` : `none`}; */
+    display: ${stateCommentBox ? `block` : `none`};
   `;
 
   return (
@@ -49,7 +49,8 @@ const LikeSection = (props) => {
 
         <p className="like-number">{numberOfLikes} likes</p>
       </div>
-      <CommentBoxDiv onClick={cb_onClick_Comment}>
+      {/* <CommentBoxDiv onClick={cb_onClick_Comment}> */}
+      <CommentBoxDiv>
         <Commen_Box postID={postID} addComment={addComment} />
       </CommentBoxDiv>
     </div>
