@@ -22,14 +22,14 @@ const App = () => {
 
   useEffect(() => {
     if (stateSearch) {
-      console.log("App.js stateSearch = ", stateSearch);
-      const updatedPosts = statePosts.filter((eachPost) => {
+      // console.log("App.js stateSearch = ", stateSearch);
+      const updatedPosts = dummyData.filter((eachPost) => {
         if (eachPost.username.toLowerCase() === stateSearch.toLowerCase()) {
           return eachPost;
         }
       });
 
-      console.log("updatedPosts = ", updatedPosts);
+      // console.log("App.js updatedPosts = ", updatedPosts);
 
       //update statePosts
       set_statePosts(updatedPosts);

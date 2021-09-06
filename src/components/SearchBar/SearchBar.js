@@ -34,7 +34,12 @@ const SearchBar = (props) => {
         <FontAwesomeIcon icon={faInstagram} />
       </div>
       <form className="search-form" onSubmit={cb_onSubmit}>
-        <input type="text" placeholder="Search" onChange={cb_onChange} />
+        <input
+          type="text"
+          placeholder="Search"
+          onChange={cb_onChange}
+          value={stateSearchInput}
+        />
         <button>Submit</button>
       </form>
       <div className="social-wrapper">
