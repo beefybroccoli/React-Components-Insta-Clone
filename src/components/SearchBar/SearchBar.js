@@ -40,7 +40,6 @@ const SearchBar = (props) => {
           onChange={cb_onChange}
           value={stateSearchInput}
         />
-        <button>Submit</button>
       </form>
       <div className="social-wrapper">
         <div className="social">

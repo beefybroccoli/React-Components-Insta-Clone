@@ -64,11 +64,23 @@ const App = () => {
     set_statePosts(updatedPosts);
   };
 
+  const addComment = (postId, new_comment) => {
+    const updatedPosts = statePosts.map((eachPost) => {
+      if (eachPost.id === postId) {
+        return { ...eachPost, comments: eachPost.comments.push(new_comment) };
+      } else {
+        return eachPost;
+      }
+    });
+
+    set_statePosts(updatedPosts);
+  };
+
   return (
     <div className="App">
       <h2>App</h2>
       <SearchBoar set_stateSearch={set_stateSearch} />
-      <Posts likePost={likePost} posts={statePosts} />
+      <Posts likePost={likePost} posts={statePosts} addComment={addComment} />
       {/* Add SearchBar and Posts here to render them */}
       {/* Check the implementation of each component, to see what props they require, if any! */}
     </div>
