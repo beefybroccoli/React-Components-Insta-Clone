@@ -30,8 +30,6 @@ const LikeSection = (props) => {
   //toggle Component_Box using stateCommentBox
   const CommentBoxDiv = styled.div`
     background-color: grey;
-    /* display: block; */
-
     display: ${stateCommentBox ? `block` : `none`};
   `;
 
